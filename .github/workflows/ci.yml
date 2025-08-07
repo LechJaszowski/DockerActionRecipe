@@ -1,0 +1,11 @@
+name: Akcja CI
+on: [push]
+jobs:
+    ci:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4.2.2
+            - name: Uruchom moją własną akcję kontenera
+              uses: ./
+              with:
+                who-to-greet: "Leszek Jaszowski"
